@@ -961,7 +961,7 @@ function ban_list(chat_id)
 	local user_info = redis:hgetall('user:'..v)
 		if user_info and user_info.print_name then
 			local print_name = string.gsub(user_info.print_name, "_", " ")
-			local print_name = string.gsub(print_name, "‮", "")
+			local print_name = string.gsub(print_name, "â€®", "")
 			text = text..k.." - "..print_name.." ["..v.."]\n"
 		else
 			text = text..k.." - "..v.."\n"
@@ -979,7 +979,7 @@ function banall_list()
     local user_info = redis:hgetall('user:'..v)
 		if user_info and user_info.print_name then
 			local print_name = string.gsub(user_info.print_name, "_", " ")
-			local print_name = string.gsub(print_name, "‮", "")
+			local print_name = string.gsub(print_name, "â€®", "")
 			text = text..k.." - "..print_name.." ["..v.."]\n"
 		else
 			text = text..k.." - "..v.."\n"
@@ -1106,7 +1106,7 @@ function muted_user_list(chat_id)
   		local user_info = redis:hgetall('user:'..v)
 		if user_info and user_info.print_name then
 			local print_name = string.gsub(user_info.print_name, "_", " ")
-			local print_name = string.gsub(print_name, "‮", "")
+			local print_name = string.gsub(print_name, "â€®", "")
 			text = text..k.." - "..print_name.." ["..v.."]\n"
 		else
 			text = text..k.." - [ "..v.." ]\n"
