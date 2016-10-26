@@ -288,7 +288,7 @@ Dont forget to rate us on Github ! <3
 ]],
     help_text_realm = [[
 Realm Commands:
-!creategroup [Name]
+!creategroup [Name] 
 Create a group
 !createrealm [Name]
 Create a realm
